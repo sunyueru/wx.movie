@@ -1,0 +1,33 @@
+<view class='slide'>
+<swiper indicator-dots="true" autoplay="true" interval="2000" duration="1000">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" mode='aspectFill'/>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+
+
+<view>
+<view class='body'>
+<navigator hover-class='none' url='../list/list?type=in_theaters&name=正在上映'>
+<view class='body-item'>
+<text>正在上映</text>
+ <image src='../../images/arrowright.png'mode='aspectFill'></image>
+</view>
+</navigator>
+<navigator hover-class='none' url='../list/list?type=coming_soon&name=即将上映'>
+<view class='body-item'>
+<text>即将上映</text>
+ <image src='../../images/arrowright.png'mode='aspectFill'></image>
+</view>
+</navigator>
+<navigator hover-class='none' url='../list/list?type=top250&name=top250'>
+<view class='body-item'>
+<text>TOP250</text>
+ <image src='../../images/arrowright.png'mode='aspectFill'></image>
+</view>
+</navigator>
+</view>
+</view>

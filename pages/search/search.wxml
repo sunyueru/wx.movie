@@ -1,0 +1,17 @@
+ <view class='search'>
+<input placeholder='输入搜索关键词' auto-focus bindchange='search'></input>
+</view> 
+ <scroll-view scroll-y="true" wx:for="{{movies}}">
+  <navigator url='../detail/detail?id={{item.id}}'>
+  <view class='list-item'>
+  <image src='{{item.images.small}}'></image>
+  <view class='meta'>
+  <text class='title'>{{item.title}}</text>
+  <text class='sub_title'>{{item.original_title}}</text>
+  <text class='year'>年份：{{item.year}}</text>
+  <text class='directors'><block wx:for='{{item.directors}}'>导演{{item.name}}</block></text>
+  </view>
+  <text class='average'>{{item.rating.average}}</text>
+  </view>
+  </navigator>
+  </scroll-view>
